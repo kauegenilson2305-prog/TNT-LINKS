@@ -1,0 +1,8 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Continue — TNT LINKS</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="auth-wrap"><section class="brand"><div class="logo">TNT<span>LINKS</span></div><p>Você está quase chegando ao seu destino.</p></section>
+<section class="panel center"><p class="eyebrow">LINK DE DESTINO</p><h1>Continue para o site</h1><div class="ad-slot">ESPAÇO PARA PUBLICIDADE<br><small>Anúncios só serão exibidos após configurar uma rede aprovada.</small></div><p class="muted">Confira o endereço de destino antes de continuar.</p><p id="destination" class="destination"></p><button id="continue" class="primary" disabled>Preparando...</button></section><footer>© 2026 TNT LINKS</footer></main>
+<script>
+const params=new URLSearchParams(location.search);let target;
+try { target=new URL(params.get('to')); if(!['http:','https:'].includes(target.protocol)) throw 0; } catch { document.querySelector('h1').textContent='Destino inválido'; }
+if(target){document.getElementById('destination').textContent=target.hostname;let n=5;const b=document.getElementById('continue');b.textContent='Continue em '+n+' segundos';const timer=setInterval(()=>{n--;if(n<=0){clearInterval(timer);b.disabled=false;b.textContent='Continuar para o destino';}else b.textContent='Continue em '+n+' segundos';},1000);b.onclick=()=>location.href=target.href;}
+</script></body></html>
