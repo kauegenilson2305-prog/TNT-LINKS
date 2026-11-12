@@ -1,0 +1,15 @@
+name = "tnt-links"
+main = "src/index.js"
+compatibility_date = "2026-11-12"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tnt-links-db"
+database_id = "COLOQUE_SEU_DATABASE_ID"
+
+[vars]
+APP_BASE_URL = "https://SEU-WORKER.workers.dev"
