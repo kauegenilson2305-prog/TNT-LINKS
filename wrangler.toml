@@ -9,7 +9,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "tnt-links-db"
-database_id = "COLOQUE_SEU_DATABASE_ID"
+database_id = "5191e8a2-01ce-487b-9619-c99b3edf26cf"
 
 [vars]
-APP_BASE_URL = "https://SEU-WORKER.workers.dev"
+APP_BASE_URL = "https://tnt-links.workers.dev"
